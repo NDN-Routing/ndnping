@@ -14,14 +14,12 @@ AM_PROG_CC_C_O
 # Checks for libraries.
 # FIXME: Replace `main' with a function in `-lm':
 AC_CHECK_LIB([m], [main], [], [AC_MSG_ERROR([library math not found.])])
-# FIXME: Replace `main' with a function in `-lcrypto':
-AC_CHECK_LIB([crypto], [main], [], [AC_MSG_ERROR([library crypto not found.])])
-# FIXME: Replace `main' with a function in `-lndn':
-AC_CHECK_LIB([ndn], [main], [], [AC_MSG_ERROR([library ndn not found.])])
+
+# Checks for libraries.
+AX_CHECK_NDN([], AC_MSG_ERROR([NDNx is required to compile PyNDN]))
 
 # Checks for header files.
 AC_CHECK_HEADERS([limits.h stdlib.h string.h sys/time.h unistd.h], [], [AC_MSG_ERROR([header file not found.])])
-AC_CHECK_HEADERS([ndn/ndn.h ndn/uri.h ndn/schedule.h ndn/hashtb.h], [], [AC_MSG_ERROR([ndn header files not found.])])
 # Checks for typedefs, structures, and compiler characteristics.
 AC_TYPE_PID_T
 

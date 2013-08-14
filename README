@@ -1,4 +1,4 @@
-ccnping and ccnpingserver are CCNx applications for testing CCN connectivity.
+ndnping and ndnpingserver are NDNx applications for testing NDN connectivity.
 
 Author
 ========================================
@@ -8,7 +8,7 @@ University of Arizona
 
 Prerequisite
 ========================================
-CCNx must be installed.
+NDNx must be installed.
 
 Installation
 ========================================
@@ -19,21 +19,21 @@ sudo make install
 
 To install in a different path, run
 ./configure --prefix=/different/path
-If CCNx is not installed in the default path, run
-./configure LDFLAGS=-L/CCNx/path/lib CFLAGS=-I/CCNx/path/include
+If NDNx is not installed in the default path, run
+./configure LDFLAGS=-L/NDNx/path/lib CFLAGS=-I/NDNx/path/include
 
-ccnpingserver
+ndnpingserver
 ========================================
-Usage: ./ccnpingserver ccnx:/name/prefix [options]
-Starts a CCN ping server that responds to Interests with name ccnx:/name/prefix/ping/number.
+Usage: ./ndnpingserver ndnx:/name/prefix [options]
+Starts a NDN ping server that responds to Interests with name ndnx:/name/prefix/ping/number.
   [-x freshness] - set FreshnessSeconds
   [-d] - run server in daemon mode
   [-h] - print this message and exit
 
-ccnping
+ndnping
 ========================================
-Usage: ./ccnping ccnx:/name/prefix [options]
-Ping a CCN name prefix using Interests with name ccnx:/name/prefix/ping/number.
+Usage: ./ndnping ndnx:/name/prefix [options]
+Ping a NDN name prefix using Interests with name ndnx:/name/prefix/ping/number.
 The numbers in the Interests are randomly generated unless specified.
   [-i interval] - set ping interval in seconds (minimum 0.1 second)
   [-c count] - set total number of pings
@@ -43,4 +43,4 @@ The numbers in the Interests are randomly generated unless specified.
 
 Test connectivity
 ========================================
-ccnpingserver is usually run on a hub which announces its own name prefix. For example, on the Arizona hub, ccnpingserver is started by running "ccnpingserver /ndn/arizona.edu". Then other nodes can run "ccnping /ndn/arizona.edu" to test the connectivity towards /ndn/arizona.edu.
+ndnpingserver is usually run on a hub which announces its own name prefix. For example, on the Arizona hub, ndnpingserver is started by running "ndnpingserver /ndn/arizona.edu". Then other nodes can run "ndnping /ndn/arizona.edu" to test the connectivity towards /ndn/arizona.edu.

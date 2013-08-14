@@ -1,7 +1,7 @@
-bin_PROGRAMS = ccnping ccnpingserver
+bin_PROGRAMS = ndnping ndnpingserver
 
-ccnping_SOURCES = ccnping.c
-ccnping_CFLAGS = -g -Wall -Wpointer-arith -Wreturn-type -Wstrict-prototypes -fPIC -pie
+ndnping_SOURCES = ndnping.c
+ndnping_CFLAGS = -g -Wall -Wpointer-arith -Wreturn-type -Wstrict-prototypes -fPIC -pie
 
-ccnpingserver_SOURCES = ccnpingserver.c
-ccnpingserver_CFLAGS = -g -Wall -Wpointer-arith -Wreturn-type -Wstrict-prototypes -fPIC -pie
+ndnpingserver_SOURCES = ndnpingserver.c
+ndnpingserver_CFLAGS = -g -Wall -Wpointer-arith -Wreturn-type -Wstrict-prototypes -fPIC -pie

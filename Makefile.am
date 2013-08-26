@@ -4,8 +4,10 @@ bin_PROGRAMS = ndnping ndnpingserver
 
 ndnping_SOURCES = ndnping.c
 ndnping_CFLAGS = -g -Wall -Wpointer-arith -Wreturn-type -Wstrict-prototypes -fPIC -pie @NDN_INCLUDES@ @OPENSSL_INCLUDES@
-ndnping_LDFLAGS = @NDN_LDFLAGS@ @OPENSSL_LDFLAGS@ @NDN_LIBS@ @OPENSSL_LIBS@
+ndnping_LDFLAGS = @NDN_LDFLAGS@ @OPENSSL_LDFLAGS@
+ndnping_LDADD = @NDN_LIBS@ @OPENSSL_LIBS@
 
 ndnpingserver_SOURCES = ndnpingserver.c
 ndnpingserver_CFLAGS = -g -Wall -Wpointer-arith -Wreturn-type -Wstrict-prototypes -fPIC -pie @NDN_INCLUDES@ @OPENSSL_INCLUDES@
-ndnpingserver_LDFLAGS = @NDN_LDFLAGS@ @OPENSSL_LDFLAGS@ @NDN_LIBS@ @OPENSSL_LIBS@
+ndnpingserver_LDFLAGS = @NDN_LDFLAGS@ @OPENSSL_LDFLAGS@
+ndnpingserver_LDADD  = @NDN_LIBS@ @OPENSSL_LIBS@

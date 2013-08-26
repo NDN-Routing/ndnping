@@ -13,6 +13,7 @@ NDNx must be installed.
 Installation
 ========================================
 Default installation:
+./bootstrap.sh
 ./configure
 make
 sudo make install

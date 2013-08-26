@@ -1,5 +1,5 @@
-ccnping
-ccnpingserver
+ndnping
+ndnpingserver
 *.o
 tags
 aclocal.m4
@@ -8,3 +8,6 @@ autom4te.cache/
 config.log
 config.status
 Makefile
+Makefile.in
+build-aux/
+configure
